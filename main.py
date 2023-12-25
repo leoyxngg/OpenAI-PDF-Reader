@@ -13,8 +13,9 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
 from langchain.callbacks import get_openai_callback
 from langchain.chat_models import ChatOpenAI
+from config import getAPIKey
 
-os.environ["OPENAI_API_KEY"] = "SECRET_KEY"
+os.environ["OPENAI_API_KEY"] = getAPIKey()
 
 def main():
     st.set_page_config(page_title="LLM Project")
